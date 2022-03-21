@@ -8,7 +8,7 @@
 
 docker build -t <Image-Name:Version>  ./ (Make sure you are running in the correct directory)
 
-docker run -it -p 7545 <Image-Name:Version>
+docker run -it -p 7545:7545 <Image-Name:Version>
 
 
 ### Repo consists of:
