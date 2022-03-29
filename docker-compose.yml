@@ -9,6 +9,8 @@ services:
       - 7545:7545  
   bot:
     build: ./Bot
+    environment:      
+      - BLOCKCHAINURL=http://host.docker.internal:7545
     restart: on-failure
     volumes:
       - ./Bot:/usr/src/app
