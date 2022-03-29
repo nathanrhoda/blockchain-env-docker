@@ -27,5 +27,9 @@ docker-compose stop
 
 - ganache + bot talking to each other
 - Docker compose locally
-- Push to lambda
-- Puch to ecs
+- Injecting configuration from docker compose all the way through to node app
+- Create a smart contract
+- Push to container
+- Access smart contract from node app
+- Push to node app to lambda
+- Puch to blockchain to ecs/ec2
