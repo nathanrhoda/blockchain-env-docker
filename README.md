@@ -27,6 +27,8 @@ docker-compose stop
 
 - Extend smart contract to write and read data to and from blockchain
 - Access smart contract from node app
-- Push to container
-- Push to node app to lambda
-- Puch to blockchain to ecs/ec2
+- Push to blockchain to ecs/ec2
+- Push node app to lambda 
+- Push node app to aws container
+- terraform everything
+- extend blockchain to make use of private transactions
