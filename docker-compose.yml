@@ -1,0 +1,18 @@
+version: '3'
+
+services:  
+  ganache:
+    build: ./Blockchain    
+    volumes:
+      - ./Blockchain:/usr/src/app
+    ports:
+      - 7545:7545  
+  bot:
+    build: ./Bot
+    restart: on-failure
+    volumes:
+      - ./Bot:/usr/src/app
+    ports:
+      - 8080:80
+    depends_on: 
+      - ganache    

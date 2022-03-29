@@ -3,6 +3,5 @@ WORKDIR /app
 COPY . .
 RUN apk add --no-cache python3 py3-pip make g++
 RUN npm install && \
-    npm i -g truffle && \
-    npm install ganache-cli --global
-CMD ["node", "/app/bot.js"]
+    npm i -g truffle
+CMD ["node", "/app/index.js"]

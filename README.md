@@ -10,6 +10,11 @@ docker build -t <Image-Name:Version>  ./ (Make sure you are running in the corre
 
 docker run -it -p 7545:7545 <Image-Name:Version>
 
+docker run --name ganache -it -p 7545:7545 bot:latest
+docker run --name bot -it -p 8080:8080 bot:latest
+
+docker-compose up -d
+docker-compose stop 
 
 ### Repo consists of:
 1. Blockchain - Spins up local blockchain
@@ -20,6 +25,7 @@ docker run -it -p 7545:7545 <Image-Name:Version>
 
 # TODO
 
+- ganache + bot talking to each other
 - Docker compose locally
 - Push to lambda
 - Puch to ecs
