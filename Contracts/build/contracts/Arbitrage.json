@@ -1,0 +1,205 @@
+{
+  "contractName": "Arbitrage",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Arbitrage.sol\":\"Arbitrage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Arbitrage.sol\":{\"keccak256\":\"0x13fc0e4f74cd03d19b3640ebf23f4e7fb9fc4b7d23190e463b5d3ce2d43a0cef\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7733fa0e58b7715a6e6f7fc5441fb2a82f0e056fd5ed26f7aa9be4c7d275c9e1\",\"dweb:/ipfs/QmZEYUkK55uoTskjuBJ59ErkwYjASH6BvmgeDhTf7n7GhC\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220fdf648093feb844d75b0302b8f75c81c2b7b47dc79d38464c4bf6d9a208305ed64736f6c634300080c0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220fdf648093feb844d75b0302b8f75c81c2b7b47dc79d38464c4bf6d9a208305ed64736f6c634300080c0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "66:51:0:-:0;;;89:26;;;;;;;;;;66:51;;;;;;",
+  "deployedSourceMap": "66:51:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Arbitrage {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "C:\\ws\\blockchain-env-docker\\Contracts\\contracts\\Arbitrage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Arbitrage.sol",
+    "exportedSymbols": {
+      "Arbitrage": [
+        6
+      ]
+    },
+    "id": 7,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Arbitrage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "Arbitrage",
+        "nameLocation": "75:9:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "110:5:0",
+              "statements": []
+            },
+            "id": 5,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "100:2:0"
+            },
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:0:0"
+            },
+            "scope": 6,
+            "src": "89:26:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "66:51:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:86:0"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Arbitrage.sol",
+    "exportedSymbols": {
+      "Arbitrage": [
+        6
+      ]
+    },
+    "id": 7,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Arbitrage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "Arbitrage",
+        "nameLocation": "75:9:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "110:5:0",
+              "statements": []
+            },
+            "id": 5,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "100:2:0"
+            },
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:0:0"
+            },
+            "scope": 6,
+            "src": "89:26:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "66:51:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:86:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.12+commit.f00d7308.Emscripten.clang"
+  },
+  "networks": {
+    "57771": {
+      "events": {},
+      "links": {},
+      "address": "0xA6e2D80eb87a50AC02ca14Be4246A54c83C31006",
+      "transactionHash": "0xe2d9601186fe3bbf12404626c740021e7ed98f410fa33b87c97e3e83fa5c9015"
+    }
+  },
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-03-29T21:36:06.972Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

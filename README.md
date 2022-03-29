@@ -25,8 +25,7 @@ docker-compose stop
 
 # TODO
 
-- Create a smart contract
-- Connect smart contract development to container
+- Extend smart contract to write and read data to and from blockchain
 - Access smart contract from node app
 - Push to container
 - Push to node app to lambda
