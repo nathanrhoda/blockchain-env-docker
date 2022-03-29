@@ -25,9 +25,6 @@ docker-compose stop
 
 # TODO
 
-- ganache + bot talking to each other
-- Docker compose locally
-- Injecting configuration from docker compose all the way through to node app
 - Create a smart contract
 - Push to container
 - Access smart contract from node app
