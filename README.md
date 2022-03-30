@@ -25,7 +25,6 @@ docker-compose stop
 
 # TODO
 
-- Extend smart contract to write and read data to and from blockchain
 - Fully test different iterations of smart contract
 - Access smart contract from node app
 - Add a ui to retrieve balances and transfer tokens between accounts
