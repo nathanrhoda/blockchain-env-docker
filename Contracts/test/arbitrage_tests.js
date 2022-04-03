@@ -1,4 +1,5 @@
 const Arbitrage = artifacts.require("Arbitrage");
+const truffleAssert = require('truffle-assertions');
 
 
 /*
@@ -9,6 +10,7 @@ const Arbitrage = artifacts.require("Arbitrage");
 contract("Arbitrage", function (accounts) {
   const trader = accounts[0]
   const arbAmount = 1
+  var tradeKey;
 
   it("should assert true", async function () {
     await Arbitrage.deployed();
@@ -17,18 +19,18 @@ contract("Arbitrage", function (accounts) {
 
   it("should return a key when passing a amount and key", async function(){
     const arbitrage = await Arbitrage.deployed();
-    const key = await arbitrage.getKey(trader, arbAmount);
+    tradeKey = await arbitrage.getKey(trader, arbAmount);
     
-    assert.isTrue(key.length > 0);
+    assert.isTrue(tradeKey.length > 0);
   })
 
-  // it("should add trade when valid data supplied", async function(){
-  //   const arbitrage = await Arbitrage.deployed();
-  //   const key = arbitrage.performArb(trader, arbAmount)
-
-  //   console.log('Key: ' + key);
-  //   assert.isTrue(false);
-  // });
+  it("should add trade when valid data supplied", async function(){
+    const arbitrage = await Arbitrage.deployed();
+    let tx = await arbitrage.performArb(arbAmount, {from: trader});
+    truffleAssert.eventEmitted(tx, 'arbPerformed', (ev) =>{
+      return ev.key == tradeKey
+    });        
+  });
 
   // it("should fail when invalid address supplied", async function(){
   //   assert.isTrue(false);

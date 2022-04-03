@@ -9,20 +9,22 @@ contract Arbitrage {
 
   mapping(bytes32 => Arb) public trades;
 
+  event arbPerformed(bytes32 key);
+
   constructor() {
   } 
 
   function performArb 
-    (
-      address trader, 
-      uint256 amount
-    ) public 
-    returns (bytes32) {
+  (     
+    uint256 amount
+  ) public 
+  {
       
-    bytes32 key = getKey(trader, amount);
-    Arb memory arb = Arb(trader, amount);
+    bytes32 key = getKey(msg.sender, amount);
+    Arb memory arb = Arb(msg.sender, amount);
     trades[key] = arb;
-    return key;
+    
+    emit arbPerformed(key);
   }
 
   function retrieveArb
