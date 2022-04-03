@@ -19,7 +19,7 @@ contract Arbitrage {
     ) public 
     returns (bytes32) {
       
-    bytes32 key = keccak256(abi.encodePacked(trader, amount));
+    bytes32 key = getKey(trader, amount);
     Arb memory arb = Arb(trader, amount);
     trades[key] = arb;
     return key;
