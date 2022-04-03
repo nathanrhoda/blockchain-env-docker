@@ -34,4 +34,14 @@ contract Arbitrage {
     Arb memory trade = trades[key];
     return (trade.trader, trade.amount);
   }
+
+  function getKey
+  (
+    address trader,
+    uint256 amount
+  ) public pure
+  returns (bytes32) 
+  {
+    return keccak256(abi.encodePacked(trader, amount));
+  }
 }
