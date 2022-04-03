@@ -25,7 +25,7 @@ docker-compose stop
 
 # TODO
 
-- Access smart contract from node app
+- Access smart contract from node app -> How to push abi contract to node app keep in mind ci/cd automation 
 - Add a ui to retrieve balances and transfer tokens between accounts
 - Push to blockchain to ecs/ec2
 - Push node app to lambda 
