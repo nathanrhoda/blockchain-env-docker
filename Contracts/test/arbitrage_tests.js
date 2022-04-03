@@ -32,9 +32,16 @@ contract("Arbitrage", function (accounts) {
     });        
   });
 
-  // it("should fail when invalid address supplied", async function(){
-  //   assert.isTrue(false);
-  // });
+  it("should fail when invalid amount supplied", async function(){
+    const invalidAmount = 0;
+    const arbitrage = await Arbitrage.deployed();
+
+    try {
+      await arbitrage.performArb(invalidAmount, {from: trader});  
+    } catch (error) {      
+      assert.equal("Amount supplied is less than or equal to zero", error.reason);
+    }  
+  });
 
   // it("should fail when invalid amount supplied", async function(){
   //   assert.isTrue(false);

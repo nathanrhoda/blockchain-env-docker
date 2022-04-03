@@ -11,13 +11,21 @@ contract Arbitrage {
 
   event arbPerformed(bytes32 key);
 
+  modifier isValidAmount(uint256 amount)
+  {
+    require(amount > 0, "Amount supplied is less than or equal to zero");
+    _;
+  }
+
   constructor() {
   } 
 
   function performArb 
-  (     
-    uint256 amount
-  ) public 
+                    (     
+                      uint256 amount
+                    ) 
+                    public 
+                    isValidAmount(amount)
   {
       
     bytes32 key = getKey(msg.sender, amount);
@@ -28,21 +36,25 @@ contract Arbitrage {
   }
 
   function retrieveArb
-  (
-    bytes32 key
-  ) public view
-  returns(address, uint256)
+                    (
+                      bytes32 key
+                    ) 
+                    public 
+                    view
+                    returns(address, uint256)
   {
     Arb memory trade = trades[key];
     return (trade.trader, trade.amount);
   }
 
   function getKey
-  (
-    address trader,
-    uint256 amount
-  ) public pure
-  returns (bytes32) 
+                (
+                  address trader,
+                  uint256 amount
+                ) 
+                public 
+                pure
+                returns (bytes32) 
   {
     return keccak256(abi.encodePacked(trader, amount));
   }
