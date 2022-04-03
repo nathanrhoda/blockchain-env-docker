@@ -1,6 +1,6 @@
 const Arbitrage = artifacts.require("Arbitrage");
 const truffleAssert = require('truffle-assertions');
-
+const bigNumber = require('bignumber.js');
 
 /*
  * uncomment accounts to access the test accounts made available by the
@@ -38,7 +38,7 @@ contract("Arbitrage", function (accounts) {
 
     try {
       await arbitrage.performArb(invalidAmount, {from: trader});  
-    } catch (error) {      
+    } catch (error) {               
       assert.equal("Amount supplied is less than or equal to zero", error.reason);
     }  
   });
@@ -51,7 +51,18 @@ contract("Arbitrage", function (accounts) {
     assert.equal(arbAmount, result[1]);    
   });
 
-  // it("should fail when invalid key supplied", async function(){
-  //   assert.isTrue(false);
-  // });
+  it("should fail when invalid key supplied", async function(){
+    const arbitrage = await Arbitrage.deployed();
+    let invalidKey = await arbitrage.getKey(trader, 2);
+    var isValid = false;
+
+    try {
+      await arbitrage.retrieveArb.call(invalidKey);        
+      isValid = true;
+    } catch (error) {      
+      isValid = false;
+    }        
+
+    assert.equal(false, isValid);
+  });
 });

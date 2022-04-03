@@ -17,6 +17,13 @@ contract Arbitrage {
     _;
   }
 
+  modifier isValidKey(bytes32 key)
+  {
+    Arb memory trade = trades[key];
+    require(trade.amount != 0, "Invalid key supplied");
+    _;
+  }
+
   constructor() {
   } 
 
@@ -40,7 +47,8 @@ contract Arbitrage {
                       bytes32 key
                     ) 
                     public 
-                    view
+                    view   
+                    isValidKey(key)                 
                     returns(address, uint256)
   {
     Arb memory trade = trades[key];
@@ -53,7 +61,7 @@ contract Arbitrage {
                   uint256 amount
                 ) 
                 public 
-                pure
+                pure                
                 returns (bytes32) 
   {
     return keccak256(abi.encodePacked(trader, amount));

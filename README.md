@@ -25,7 +25,6 @@ docker-compose stop
 
 # TODO
 
-- Fully test different iterations of smart contract
 - Access smart contract from node app
 - Add a ui to retrieve balances and transfer tokens between accounts
 - Push to blockchain to ecs/ec2
