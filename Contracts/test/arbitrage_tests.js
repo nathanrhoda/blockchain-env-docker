@@ -43,13 +43,13 @@ contract("Arbitrage", function (accounts) {
     }  
   });
 
-  // it("should fail when invalid amount supplied", async function(){
-  //   assert.isTrue(false);
-  // });
+  it("should retrieve trade when valid key supplied", async function(){
+    const arbitrage = await Arbitrage.deployed();
+    let result = await arbitrage.retrieveArb.call(tradeKey);
 
-  // it("should retrieve trade when valid key supplied", async function(){
-  //   assert.isTrue(false);
-  // });
+    assert.equal(trader, result[0]);
+    assert.equal(arbAmount, result[1]);    
+  });
 
   // it("should fail when invalid key supplied", async function(){
   //   assert.isTrue(false);
